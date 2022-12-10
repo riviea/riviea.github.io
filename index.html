@@ -1,8 +1,29 @@
+<!doctype html>
 <html>
-  <head>
-    <title>test page</title>
-  </head>
-  <body>
-    jw web test
-  </body>
+<head>
+  <title>Dos Style Website</title>
+  <style>
+    body {
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dos Style Website</h1>
+  <form>
+    <label for="input">Enter some text:</label>
+    <input type="text" id="input" />
+    <input type="submit" value="Submit" />
+  </form>
+  <pre id="output"></pre>
+  <script>
+    const inputEl = document.getElementById("input");
+    const outputEl = document.getElementById("output");
+    const formEl = document.querySelector("form");
+    formEl.addEventListener("submit", (event) => {
+      event.preventDefault();
+      outputEl.textContent = inputEl.value;
+    });
+  </script>
+</body>
 </html>
